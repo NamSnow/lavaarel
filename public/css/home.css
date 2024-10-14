@@ -1,0 +1,86 @@
+.movies-bg {
+    background: linear-gradient(to top, #44759256, transparent);
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.movies-bg:hover {
+    background: linear-gradient(to top, #44759256, #44759256);
+    &img {
+        transform: scale(1.1);
+    }
+}
+
+.navbar-bg {
+    --bg-color1: rgb(25, 37, 63);
+    --bg-color2: rgb(54, 24, 34);
+    background: linear-gradient(to right, var(--bg-color1) 0%, var(--bg-color2) 33.33%, var(--bg-color1) 66.66%, var(--bg-color2) 100%);
+    background-size: 300% 300%;
+    animation: nav-gradient 6s linear infinite;
+}
+
+@keyframes nav-gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#showsDD:hover + div,
+#moviesDD:hover + div,
+#popularsDD:hover + div,
+#logout-form:hover + div.navbar-dd {
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-dd:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+#flash-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+}
+
+#flash-message .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.truncate:hover + .popover {
+    z-index: 500;
+    opacity: 1;
+}
+
+.popover {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    opacity: 0;
+    border-radius: 6px;
+    z-index: -1;
+    transition: 0.33s ease;
+    white-space: nowrap;
+}
